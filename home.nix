@@ -22,14 +22,6 @@
     bash.enable = true;
     starship.enable = true;
 
-    gh = {
-      enable = true;
-      gitCredentialHelper.hosts = [
-        "https://github.com"
-        "https://gist.github.com"
-        "https://git.laksith.dev"
-      ];
-
     git = {
       enable = true;
       userName = "laksith19";
