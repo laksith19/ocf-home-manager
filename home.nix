@@ -14,25 +14,25 @@
       jetbrains.idea-community-bin
     ];
 
-    programs = {
-      home-manager.enable = true;
-      bash.enable = true;
-      starship.enable = true;
-      git = {
-        enable = true;
-        userName = "laksith19";
-        userEmail = "admin@laksith.dev";
+    stateVersion = "24.05"; # Please read the comment before changing.
+  };
 
-        extraConfig = {
-          commit.gpgsign = true;
-          gpg.format = "ssh";
-          gpg.ssh.allowedsignersfile = "${toString config.home.homeDirectory}/.ssh/allowed_signers";
-          user.signingkey = "${toString config.home.homeDirectory}/.ssh/id_ed25519.pub";
-          init.defaultbranch = "main";
-        };
+  programs = {
+    home-manager.enable = true;
+    bash.enable = true;
+    starship.enable = true;
+    git = {
+      enable = true;
+      userName = "laksith19";
+      userEmail = "admin@laksith.dev";
+
+      extraConfig = {
+        commit.gpgsign = true;
+        gpg.format = "ssh";
+        gpg.ssh.allowedsignersfile = "${toString config.home.homeDirectory}/.ssh/allowed_signers";
+        user.signingkey = "${toString config.home.homeDirectory}/.ssh/id_ed25519.pub";
+        init.defaultbranch = "main";
       };
     };
-
-    stateVersion = "24.05"; # Please read the comment before changing.
   };
 }
