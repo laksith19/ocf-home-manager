@@ -31,7 +31,7 @@
         commit.gpgsign = true;
         gpg.format = "ssh";
         gpg.ssh.allowedsignersfile = "${toString config.home.homeDirectory}/.ssh/allowed_signers";
-        user.signingkey = "${toString config.home.homeDirectory}/.ssh/id_ed25519.pub";
+        user.signingkey = "${toString config.home.homeDirectory}/.ssh/ed25519-sk.pub";
         init.defaultbranch = "main";
       };
     };
